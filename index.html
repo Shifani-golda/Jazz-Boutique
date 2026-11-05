@@ -58,6 +58,37 @@
             border-radius: 8px;
         }
 
+        fieldset {
+            border: 1px solid #c99c96;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        legend {
+            color: #965c56;
+            font-weight: bold;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        input, select, textarea {
+            padding: 9px;
+            margin-top: 5px;
+            border: 1px solid #c99c96;
+            border-radius: 5px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #684c48;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
         table {
             border-collapse: collapse;
             width: 80%;
@@ -74,8 +105,9 @@
             background-color: #e8c5c0;
         }
 
-        a {
-            color: #965c56;
+        audio, video {
+            margin-top: 10px;
+            max-width: 100%;
         }
 
         footer {
@@ -87,7 +119,7 @@
     </style>
 </head>
 
-<body id="top">
+<body>
 
     <!-- Header Section -->
     <header>
@@ -100,7 +132,8 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#collection">Collections</a>
-        <a href="#prices">Price List</a>
+        <a href="#order">Order Now</a>
+        <a href="#media">Media</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -110,79 +143,22 @@
 
         <p>
             Welcome to Jazz Boutique, your destination for stylish and
-            elegant fashion. We offer a beautiful collection of traditional
-            wear, western outfits, and trendy accessories.
+            elegant fashion. Explore our beautiful collection of
+            traditional wear, western outfits, and trendy accessories.
         </p>
 
         <p>
-            Our goal is to make every customer feel confident and beautiful
-            with fashionable outfits for every occasion.
+            Find your favourite outfit and make every occasion special
+            with our exclusive fashion collections.
         </p>
 
-        <h3>Our Featured Collection</h3>
-
-        <a href="https://www.vogue.com/" target="_blank">
-            Explore Fashion Trends
-        </a>
-        <br><br>
-
-        <!-- Clickable Image -->
-        <a href="https://www.vogue.com/" target="_blank">
-            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600"
-                 alt="Fashion Boutique Collection">
-        </a>
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600"
+             alt="Jazz Boutique Fashion Collection">
     </div>
 
     <!-- Collection Section -->
     <div id="collection">
         <h2>Our Collections</h2>
-
-        <p>Explore our exclusive fashion categories:</p>
-
-        <h3>Women's Fashion</h3>
-
-        <ul>
-            <li>Traditional Wear
-                <ul>
-                    <li>Sarees</li>
-                    <li>Salwar Suits</li>
-                    <li>Lehengas</li>
-                </ul>
-            </li>
-
-            <li>Western Wear
-                <ul>
-                    <li>Party Dresses</li>
-                    <li>Casual Tops</li>
-                    <li>Jeans</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h3>How to Shop With Us</h3>
-
-        <ol>
-            <li>Explore our collections.
-                <ol>
-                    <li>Choose your favourite outfit.</li>
-                    <li>Check the available sizes.</li>
-                </ol>
-            </li>
-
-            <li>Contact our boutique.
-                <ol>
-                    <li>Confirm your order.</li>
-                    <li>Complete your purchase.</li>
-                </ol>
-            </li>
-        </ol>
-    </div>
-
-    <!-- Price List Section -->
-    <div id="prices">
-        <h2>Our Price List</h2>
-
-        <p>Check out some of our popular fashion items:</p>
 
         <table>
             <tr>
@@ -217,27 +193,170 @@
         </table>
     </div>
 
-    <!-- Description List Section -->
+    <!-- Order Form Section -->
+    <div id="order">
+        <h2>Place Your Order</h2>
+
+        <p>Fill in the details below to place your fashion order.</p>
+
+        <form action="#" method="get">
+
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+                <br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+                <br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="Enter your phone number">
+                <br>
+
+                <label for="date">Order Date:</label><br>
+                <input type="date" id="date" name="date">
+                <br>
+
+                <label for="address">Delivery Address:</label><br>
+                <textarea id="address" name="address"
+                          rows="4" cols="35"
+                          placeholder="Enter your address"></textarea>
+            </fieldset>
+
+            <!-- Product Selection -->
+            <fieldset>
+                <legend>Product Details</legend>
+
+                <label for="category">Select Category:</label><br>
+                <select id="category" name="category">
+                    <option value="">Choose a category</option>
+                    <option value="traditional">Traditional Wear</option>
+                    <option value="western">Western Wear</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+                <br>
+
+                <label for="product">Select Product:</label><br>
+                <select id="product" name="product">
+                    <option value="saree">Designer Saree</option>
+                    <option value="dress">Party Wear Dress</option>
+                    <option value="top">Casual Top</option>
+                    <option value="kurti">Designer Kurti</option>
+                </select>
+                <br>
+
+                <label>Choose Size:</label><br>
+                <input type="radio" id="small" name="size" value="S">
+                <label for="small">S</label>
+
+                <input type="radio" id="medium" name="size" value="M">
+                <label for="medium">M</label>
+
+                <input type="radio" id="large" name="size" value="L">
+                <label for="large">L</label>
+
+                <input type="radio" id="xl" name="size" value="XL">
+                <label for="xl">XL</label>
+                <br>
+
+                <label>Additional Preferences:</label><br>
+                <input type="checkbox" id="gift" name="gift" value="yes">
+                <label for="gift">Gift Wrapping</label>
+
+                <input type="checkbox" id="delivery" name="delivery" value="yes">
+                <label for="delivery">Express Delivery</label>
+                <br>
+
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity"
+                       min="1" max="10" value="1">
+                <br>
+
+                <label for="message">Special Instructions:</label><br>
+                <textarea id="message" name="message"
+                          rows="3" cols="35"
+                          placeholder="Enter your preferences"></textarea>
+            </fieldset>
+
+            <!-- Payment Section -->
+            <fieldset>
+                <legend>Payment Information</legend>
+
+                <label for="payment">Payment Method:</label><br>
+                <select id="payment" name="payment">
+                    <option value="upi">UPI</option>
+                    <option value="card">Credit / Debit Card</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+                <br><br>
+
+                <label for="file">Upload Reference Image:</label><br>
+                <input type="file" id="file" name="file">
+            </fieldset>
+
+            <!-- Form Buttons -->
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Reset Form">
+
+        </form>
+    </div>
+
+    <!-- Media Section -->
+    <div id="media">
+        <h2>Jazz Boutique Fashion Gallery</h2>
+
+        <p>Enjoy our fashion music collection:</p>
+
+        <!-- Audio Element -->
+        <h3>Fashion Audio</h3>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                    type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+
+        <!-- Video Element -->
+        <h3>Fashion Video</h3>
+        <video width="400" height="250" controls>
+            <source src="https://videos.pexels.com/video-files/3209298/3209298-hd_1920_1080_25fps.mp4"
+                    type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+        <!-- Embed Element -->
+        <h3>Embedded Fashion Content</h3>
+        <embed src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+               type="application/pdf"
+               width="400" height="300">
+
+        <!-- Iframe Element -->
+        <h3>Explore Fashion Trends</h3>
+        <iframe src="https://www.wikipedia.org/"
+                width="400" height="300"
+                title="Fashion Information">
+        </iframe>
+    </div>
+
+    <!-- Order Progress Section -->
     <div>
-        <h2>Why Choose Jazz Boutique?</h2>
+        <h2>Order Progress</h2>
 
-        <dl>
-            <dt><b>Quality</b></dt>
-            <dd>We offer quality fabrics and comfortable outfits.</dd>
+        <p>Your order preparation progress:</p>
 
-            <dt><b>Style</b></dt>
-            <dd>Our collections follow the latest fashion trends.</dd>
-
-            <dt><b>Affordability</b></dt>
-            <dd>We provide stylish outfits at reasonable prices.</dd>
-        </dl>
+        <progress value="70" max="100"></progress>
+        <p>70% Completed</p>
     </div>
 
     <!-- Contact Section -->
     <div id="contact">
         <h2>Contact Us</h2>
-
-        <p>We would love to help you find your perfect outfit!</p>
 
         <p>Email:
             <a href="mailto:jazzboutique@gmail.com">
@@ -251,12 +370,8 @@
             </a>
         </p>
 
-        <p>Visit our
-            <a href="#home">Home Section</a>
-        </p>
-
         <p>
-            <a href="#top">Back to Top</a>
+            <a href="#home">Back to Home</a>
         </p>
     </div>
 
