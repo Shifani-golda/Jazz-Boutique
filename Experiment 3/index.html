@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jazz Boutique | Fashion Collection</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #fff7f5;
+            color: #493735;
+            font-family: Georgia, serif;
+        }
+        header {
+            background-color: #e8c5c0;
+            text-align: center;
+            padding: 25px;
+        }
+        h1 {
+            color: #684c48;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 3px #ffffff;
+        }
+        nav {
+            background-color: #684c48;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a:link {
+            background-color: #fff7f5;
+            color: #684c48;
+        }
+        nav a:visited {
+            background-color: #e8c5c0;
+            color: #493735;
+        }
+        nav a:hover {
+            background-color: #c99c96;
+            color: white;
+        }
+        nav a:active {
+            background-color: #965c56;
+            color: white;
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h2 {
+            color: #9b625d;
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .banner {
+            background-image: url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1000");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .collections {
+            column-count: 3;
+            column-gap: 25px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #f0dcd8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #c99c96;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        ul {
+            list-style-type: circle;
+        }
+        footer {
+            background-color: #684c48;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        section {
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            .collections {
+                column-count: 1;
+            }
+            nav a {
+                display: block;
+            }
+            .banner {
+                height: 150px;
+                padding-top: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JAZZ BOUTIQUE</h1>
+        <p style="text-align: center;">Discover Your Style, Express Yourself!</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="banner" id="home">
+        Welcome to Jazz Boutique
+    </div>
+    <section id="collections">
+        <h2>Our Collections</h2>
+        <div class="collections">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500" alt="Traditional Saree">
+                <h3>Traditional Sarees</h3>
+                <p>Elegant sarees for special occasions.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500" alt="Western Dress">
+                <h3>Western Dresses</h3>
+                <p>Trendy outfits for a modern look.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500" alt="Casual Wear">
+                <h3>Casual Wear</h3>
+                <p>Comfortable styles for everyday wear.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Jazz Boutique offers a beautiful collection of traditional and modern outfits. Our aim is to help everyone express their personal style with confidence.</p>
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li>Quality Fashion Collections</li>
+            <li>Affordable Prices</li>
+            <li>Latest Designs</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: jazzboutique@gmail.com</p>
+        <p>Phone: +919876543210</p>
+        <a href="mailto:jazzboutique@gmail.com">Send us an Email</a>
+    </section>
+    <footer>
+        <p style="text-align: center;">© 2026 Jazz Boutique. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
