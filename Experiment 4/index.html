@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jazz Boutique | Advanced CSS3</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: linear-gradient(to right, #fff7f5, #f0dcd8);
+            color: #493735;
+        }
+        header {
+            background: linear-gradient(to right, #684c48, #c99c96);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 10px #b99b96;
+        }
+        h1 {
+            letter-spacing: 5px;
+            text-shadow: 3px 3px 5px #392523;
+        }
+        nav {
+            text-align: center;
+            padding: 15px;
+        }
+        nav a {
+            display: inline-block;
+            background: #684c48;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+        nav a:hover {
+            background: #c99c96;
+            color: #493735;
+        }
+        .banner {
+            margin: 20px;
+            padding: 50px;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 25px 50px 30px 5px;
+            background-image: url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1000"), linear-gradient(to right, #684c48, #c99c96);
+            background-position: center, center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: cover, cover;
+            box-shadow: 3px 3px 10px #9b625d;
+        }
+        section {
+            margin: 25px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 12px solid transparent;
+            border-image: url("https://www.w3schools.com/cssref/border.png") 30 round;
+            border-radius: 15px;
+        }
+        h2 {
+            color: #9b625d;
+            text-align: center;
+        }
+        .collections {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+            background: linear-gradient(to bottom, #f0dcd8, #ffffff);
+            border-radius: 20px;
+            box-shadow: 3px 3px 10px #c99c96;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .card img:hover {
+            opacity: 1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #c99c96;
+        }
+        tr:nth-child(odd) {
+            background-color: #f0dcd8;
+        }
+        tr:nth-child(even) {
+            background-color: #fff7f5;
+        }
+        tr:hover {
+            background-color: #e8c5c0;
+        }
+        .itemName {
+            cursor: pointer;
+        }
+        .itemImg {
+            opacity: 0.2;
+            width: 100px;
+            transition: opacity 0.3s;
+        }
+        .itemName:hover + .itemImg {
+            opacity: 1;
+        }
+        input {
+            padding: 10px;
+            margin: 8px;
+            border: 2px solid #c99c96;
+            border-radius: 8px;
+        }
+        input:focus {
+            border: 3px solid #9b625d;
+            background-color: #fff7f5;
+            outline: none;
+        }
+        input:required {
+            border: 2px solid #684c48;
+        }
+        input[type="email"]:invalid {
+            color: red;
+        }
+        input[type="email"]:valid {
+            color: blue;
+        }
+        button {
+            background: linear-gradient(to right, #684c48, #c99c96);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            box-shadow: 2px 2px 8px #684c48;
+        }
+        footer {
+            background-color: #684c48;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 20px 20px 0 0;
+        }
+        @media (max-width: 600px) {
+            .banner {
+                padding: 30px 10px;
+            }
+            section {
+                margin: 12px;
+            }
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JAZZ BOUTIQUE</h1>
+        <p>Discover Your Style, Express Yourself!</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="banner" id="home">
+        Welcome to Jazz Boutique
+    </div>
+    <section id="collections">
+        <h2>Our Collections</h2>
+        <div class="collections">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500" alt="Traditional Saree">
+                <h3>Traditional Sarees</h3>
+                <p>Elegant outfits for special occasions.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500" alt="Western Fashion">
+                <h3>Western Wear</h3>
+                <p>Modern and stylish everyday fashion.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500" alt="Casual Wear">
+                <h3>Casual Wear</h3>
+                <p>Comfortable styles for everyday use.</p>
+            </div>
+        </div>
+    </section>
+    <section id="products">
+        <h2>Featured Products</h2>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Image</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td class="itemName">Designer Saree</td>
+                <td><img class="itemImg" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200" alt="Saree"></td>
+                <td>₹2500</td>
+            </tr>
+            <tr>
+                <td class="itemName">Western Dress</td>
+                <td><img class="itemImg" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=200" alt="Western Dress"></td>
+                <td>₹1800</td>
+            </tr>
+            <tr>
+                <td class="itemName">Casual Top</td>
+                <td><img class="itemImg" src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=200" alt="Casual Top"></td>
+                <td>₹850</td>
+            </tr>
+        </table>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label>Name:</label><br>
+            <input type="text" placeholder="Enter your name" required><br>
+            <label>Email:</label><br>
+            <input type="email" placeholder="Enter your email" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>© 2026 Jazz Boutique. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
